@@ -6,15 +6,17 @@ import PropTypes from 'prop-types';
 import { Notes } from '../api/notes';
 import NoteListHeader from './NoteListHeader';
 import NoteListItem from './NoteListItem';
+import NoteListEmptyItem from './NoteListEmptyItem';
 
 export const NoteList = (props) => {
 
   const renderLinksListItem = () => {
     if(props.notes.length === 0) {
       return (
-        <div className="item">
-          <p className="item__status-message">No Notes Found</p>
-        </div>
+        // <div className="item">
+        //   <p className="item__status-message">No Notes Found</p>
+        // </div>
+        <NoteListEmptyItem />
       );
     };
 
